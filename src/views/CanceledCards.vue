@@ -1,5 +1,5 @@
 <template>
-
+  отменённые карточки
 </template>
 
 <script setup>

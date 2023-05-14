@@ -4,6 +4,21 @@ import { createRouter, createWebHistory } from 'vue-router'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+    {
+      path: '/',
+      name: 'home',
+      component: () => import('../views/AllCards.vue')
+    },
+    {
+      path: '/completed',
+      name: 'completed',
+      component: () => import('../views/CompletedCards.vue')
+    },
+    {
+      path: '/cancaled',
+      name: 'cancaled',
+      component: () => import('../views/CanceledCards.vue')
+    },
     /* {
       path: '/',
       name: 'home',
