@@ -9,7 +9,11 @@ import AppNavigate from "@/components/AppNavigate.vue";
     <AppNavigate></AppNavigate>
   </v-layout>
 
-  <RouterView />
+  <router-view v-slot="{ Component }">
+    <transition name="fade">
+      <component :is="Component"/>
+    </transition>
+  </router-view>
 </template>
 
 <style scoped>
