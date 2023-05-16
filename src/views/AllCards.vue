@@ -1,11 +1,15 @@
+<script setup>
+import ViewCard from "@/components/ViewCard.vue";
+import { cardsStore } from "@/stores/cards";
+
+const { cards } = cardsStore();
+
+</script>
+
 <template>
-  <view-card></view-card>
+  <view-card v-for="card in cards" :key="card.id" :card="card"></view-card>
 </template>
 
-<script setup>
-
-import ViewCard from "@/components/ViewCard.vue";
-</script>
 
 <style scoped>
 
